@@ -79,8 +79,12 @@ const App = () => {
             <Route path="/posts" element={<PostList posts={posts} />} />
             <Route path="/posts/new" element={<PostForm handleAddPost={handleAddPost} />} />
             <Route path="/posts/:postId" element={<PostDetails handleDeletePost={handleDeletePost} />} />
-            <Route path="/posts/:hootId/edit" element={<PostForm handleUpdatePost={handleUpdatePost}/>} />
+            <Route
+                path="/posts/:postId/edit"
+                element={<PostForm handleUpdatePost={handleUpdatePost} />}
+              />
             </>
+            
           
           ) : (
             //public

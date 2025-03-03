@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthedUserContext } from '../../App';
+import CommentForm from '../CommentForm/CommentForm';
+
 
 
 
@@ -21,7 +23,10 @@ const PostDetails = (props) => {
         fetchPost();
     }, [postId]);
     //======================================
-   
+    const handleAddComment = async (commentFormData) => {
+        const newComment = await postService.createComment(postId, commentFormData);
+        setPost({ ...post, comments: [...post.comments, newComment] });
+    };
 
     //======================================
     if (!post) return <main>Loading...</main>;
@@ -48,6 +53,24 @@ const PostDetails = (props) => {
                     </div>
                 )}
                 <Link to="/posts" className="mt-4 inline-block text-blue-500">Back to Posts</Link>
+                <section>
+                <h2>Comments</h2>
+                <CommentForm handleAddComment={handleAddComment} />
+
+                {!post.comments.length && <p>There are no comments.</p>}
+
+                {post.comments.map((comment) => (
+                    <article key={comment._id}>
+                        <header>
+                            <p>
+                                {comment.author.username} posted on
+                                {new Date(comment.createdAt).toLocaleDateString()}
+                            </p>
+                        </header>
+                        <p>{comment.text}</p>
+                    </article>
+                ))}
+            </section>
             </main>
         </>
     );
