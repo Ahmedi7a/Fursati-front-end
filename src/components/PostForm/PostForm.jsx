@@ -11,7 +11,9 @@ const PostForm = (props) => {
    email: '',
    about: '',
    education: 'High School',
-   role: 'Employed',
+   role: 'Software Development',
+   experience:'',
+   status:'Employed',
    nationality: 'Bahraini',
   });
 
@@ -29,6 +31,8 @@ const PostForm = (props) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    console.log(evt)
+    console.log(formData)
     if (postId) {
       props.handleUpdatePost(postId, formData);
     } else {
@@ -55,7 +59,7 @@ const PostForm = (props) => {
           required
           type="text"
           name="email"
-          id="text-input"
+          id="email-input"
           value={formData.email}
           onChange={handleChange}
         />
@@ -82,6 +86,7 @@ const PostForm = (props) => {
           <option value="Master's Degree">Master's Degree</option>
           <option value="Doctorate (PhD)">Doctorate (PhD)</option>
         </select>
+        <label htmlFor="role-input">Role</label>
         <select
           required
          name="role"
@@ -94,6 +99,19 @@ const PostForm = (props) => {
            <option value="Security">Security</option>
            <option value="Technician">Technician</option>
            </select>
+
+
+           <label htmlFor="experience-input">Experience</label>
+        <input
+          required
+          type="text"
+          name="experience"
+          id="experience-input"
+          value={formData.experience}
+          onChange={handleChange}
+        />
+
+           <label htmlFor="status-input">Status</label>
            <select
          required
          name="status"
@@ -103,6 +121,19 @@ const PostForm = (props) => {
         >
         <option value="Employed">Employed</option>
         <option value="Unemployed">Unemployed</option>
+         </select>
+
+
+         <label htmlFor="nationality-input">Nationality</label>
+           <select
+         required
+         name="nationality"
+         id="nationality-input"
+         value={formData.nationality}
+         onChange={handleChange}
+        >
+        <option value="Bahraini">Bahraini</option>
+        <option value="Foreigner">Foreigner</option>
          </select>
         <button type="submit">SUBMIT</button>
       </form>
