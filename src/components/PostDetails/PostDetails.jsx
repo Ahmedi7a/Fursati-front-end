@@ -41,10 +41,16 @@ const PostDetails = (props) => {
                     <p><strong>Status:</strong> {post.status}</p>
                     <p><strong>Nationality:</strong> {post.nationality}</p>
                 </div>
+                {post.author && user && post.author._id === user._id && (
+                    <div className="mt-4">
+                        <Link to={`/posts/${post._id}/edit`} className="text-blue-500 mr-2">Edit</Link>
+                        <button onClick={() => props.handleDeletePost(post._id)} className="text-red-500">Delete</button>
+                    </div>
+                )}
                 <Link to="/posts" className="mt-4 inline-block text-blue-500">Back to Posts</Link>
             </main>
         </>
-    )
+    );
 }
 
 export default PostDetails

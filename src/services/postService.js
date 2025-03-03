@@ -41,6 +41,21 @@ const index = async () => {
     }
   };
 
+  //delete post
+  const deletePost = async (hootId) => {
+    try {
+      const res = await fetch(`${BASE_URL}/${hootId}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+      });
+      return res.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
 
 
 
@@ -48,4 +63,5 @@ const index = async () => {
     index,
     show,
     createComment,
+    deletePost,
   }
