@@ -45,6 +45,15 @@ const App = () => {
     navigate('/posts');
   };
 
+  //update post
+  const handleUpdatePost = async (postId, postFormData) => {
+    const updatedPost = await postService.update(postId, postFormData);
+
+    setPosts(posts.map((post) => (postId === post._id ? updatedPost : post)));
+
+    navigate(`/posts/${postId}`);
+  };
+
 
   //===================================================================================
 
