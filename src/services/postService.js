@@ -77,10 +77,7 @@ const index = async () => {
   export {
     index,
     show,
-<<<<<<< HEAD
     create,
-=======
     createComment,
     deletePost,
->>>>>>> 14dc66c02f44518ebd2a3b2ddf847f83db112994
   }

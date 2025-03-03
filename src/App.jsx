@@ -69,13 +69,8 @@ const App = () => {
             <>
             <Route path="/" element={<Dashboard user={user} />} />
             <Route path="/posts" element={<PostList posts={posts} />} />
-<<<<<<< HEAD
-            <Route path="/posts/:postId" element={<PostDetails />} />
             <Route path="/posts/new" element={<PostForm handleAddPost={handleAddPost} />} />
-            
-=======
             <Route path="/posts/:postId" element={<PostDetails handleDeletePost={handleDeletePost} />} />
->>>>>>> 14dc66c02f44518ebd2a3b2ddf847f83db112994
             </>
           
           ) : (
