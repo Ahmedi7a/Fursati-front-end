@@ -21,7 +21,7 @@ const PostDetails = (props) => {
         fetchPost();
     }, [postId]);
     //======================================
-
+   
 
     //======================================
     if (!post) return <main>Loading...</main>;
@@ -29,7 +29,20 @@ const PostDetails = (props) => {
 
     return (
         <>
-            details jhjhjjjhjjhjjjhj
+            <main className="container mx-auto p-4">
+                <h1 className="text-2xl font-bold">Post Details</h1>
+                <div className="border p-4 rounded shadow-md mt-4">
+                    <p><strong>Name:</strong> {post.name}</p>
+                    <p><strong>Email:</strong> {post.email}</p>
+                    <p><strong>About:</strong> {post.about}</p>
+                    <p><strong>Education:</strong> {post.education}</p>
+                    <p><strong>Role:</strong> {post.role}</p>
+                    <p><strong>Experience:</strong> {post.experience}</p>
+                    <p><strong>Status:</strong> {post.status}</p>
+                    <p><strong>Nationality:</strong> {post.nationality}</p>
+                </div>
+                <Link to="/posts" className="mt-4 inline-block text-blue-500">Back to Posts</Link>
+            </main>
         </>
     )
 }
