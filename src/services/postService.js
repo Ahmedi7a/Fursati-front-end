@@ -25,8 +25,24 @@ const index = async () => {
   };
 
 
+  const create = async (postFormData) => {
+    try {
+      const res = await fetch(BASE_URL, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postFormData),
+      });
+      return res.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   export {
     index,
     show,
+    create,
   }

@@ -9,13 +9,16 @@ import * as authService from '../src/services/authService'; // import the authse
 //posts stuff
 import PostList from './components/PostList/PostList';
 import PostDetails from './components/PostDetails/PostDetails';
+import PostForm from './components/PostForm/PostForm';
 import * as postService from './services/postService';
 
 
 export const AuthedUserContext = createContext(null);
 
 const App = () => {
+  const navigate = useNavigate()
   const [user, setUser] = useState(authService.getUser()); // using the method from authservice
+
 
   const handleSignout = () => {
     authService.signout();
@@ -35,6 +38,14 @@ const App = () => {
   }, [user]); // we added this so when another user sign in, use effect again because another user 
 
 
+  const handleAddPost = async (formData) => {
+    const newPost = await postService.create(formData)
+    const newPostList = [ newPost, ...posts];
+
+    setPosts(newPostList)
+    navigate('/posts');
+  };
+
 
   //===================================================================================
 
@@ -49,7 +60,10 @@ const App = () => {
             <Route path="/" element={<Dashboard user={user} />} />
             <Route path="/posts" element={<PostList posts={posts} />} />
             <Route path="/posts/:postId" element={<PostDetails />} />
+            <Route path="/posts/new" element={<PostForm handleAddPost={handleAddPost} />} />
+            
             </>
+          
           ) : (
             //public
             <Route path="/" element={<Landing />} />
