@@ -96,4 +96,5 @@ const index = async () => {
     create,
     createComment,
     deletePost,
+    update,
   }
