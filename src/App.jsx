@@ -27,6 +27,7 @@ const App = () => {
   //===================================================================================
   //anything related to posts:
   const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -37,6 +38,15 @@ const App = () => {
     if (user) fetchAllPosts();
   }, [user]); // we added this so when another user sign in, use effect again because another user 
 
+  //delete post
+  const handleDeletePost = async (postId) => {
+    // Call upon the service function:
+    const deletedPost = await postService.deletePost(postId);
+    // Filter state using deletedpost._id:
+    setPosts(posts.filter((post) => post._id !== deletedPost._id));
+    // Redirect the user:
+    navigate('/posts');
+  };
 
   const handleAddPost = async (formData) => {
     const newPost = await postService.create(formData)
@@ -59,9 +69,13 @@ const App = () => {
             <>
             <Route path="/" element={<Dashboard user={user} />} />
             <Route path="/posts" element={<PostList posts={posts} />} />
+<<<<<<< HEAD
             <Route path="/posts/:postId" element={<PostDetails />} />
             <Route path="/posts/new" element={<PostForm handleAddPost={handleAddPost} />} />
             
+=======
+            <Route path="/posts/:postId" element={<PostDetails handleDeletePost={handleDeletePost} />} />
+>>>>>>> 14dc66c02f44518ebd2a3b2ddf847f83db112994
             </>
           
           ) : (
@@ -77,3 +91,5 @@ const App = () => {
 };
 
 export default App;
+
+
