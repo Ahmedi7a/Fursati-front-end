@@ -31,7 +31,6 @@ const PostDetails = (props) => {
     //======================================
     if (!post) return <main>Loading...</main>;
 
-
     return (
         <>
             <main className="container mx-auto p-4">
@@ -63,7 +62,7 @@ const PostDetails = (props) => {
                     <article key={comment._id}>
                         <header>
                             <p>
-                                {comment.author.username} posted on
+                                {comment.author.username} posted on   &nbsp; 
                                 {new Date(comment.createdAt).toLocaleDateString()}
                             </p>
                         </header>
