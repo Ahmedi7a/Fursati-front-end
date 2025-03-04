@@ -30,14 +30,13 @@ const SigninForm = (props) => {
       updateMessage(err.message);
     }
   };
-
   return (
-    <main>
-      <h1>Log In</h1>
-      <p>{message}</p>
-      <form autoComplete="off" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Username:</label>
+<main className="container mt-4">
+      <h1 className="text-center">Sign In</h1>
+      <p className="text-center text-danger">{message}</p>
+      <form autoComplete="off" onSubmit={handleSubmit} className="mx-auto p-4 border rounded shadow-sm" style={{ maxWidth: "400px" }}>
+        <div className="form-group">
+          <label htmlFor="username">Username:</label>
           <input
             type="text"
             autoComplete="off"
@@ -45,9 +44,11 @@ const SigninForm = (props) => {
             value={formData.username}
             name="username"
             onChange={handleChange}
+            className="form-control"
+            placeholder="Enter your username"
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -56,17 +57,21 @@ const SigninForm = (props) => {
             value={formData.password}
             name="password"
             onChange={handleChange}
+            className="form-control"
+            placeholder="Enter your password"
           />
         </div>
-        <div>
-          <button>Log In</button>
+        <div className="d-flex justify-content-between mt-3">
+          <button type="submit" className="btn btn-primary">Sign In</button>
           <Link to="/">
-            <button>Cancel</button>
+            <button type="button" className="btn btn-secondary">Cancel</button>
           </Link>
         </div>
       </form>
     </main>
   );
-};
+
+ 
+}
 
 export default SigninForm;
