@@ -11,6 +11,7 @@ import PostList from './components/PostList/PostList';
 import PostDetails from './components/PostDetails/PostDetails';
 import PostForm from './components/PostForm/PostForm';
 import * as postService from './services/postService';
+import Footer from './components/Footer/Footer';
 
 
 export const AuthedUserContext = createContext(null);
@@ -93,6 +94,7 @@ const App = () => {
           <Route path="/signup" element={<SignupForm setUser={setUser} />} />
           <Route path="/signin" element={<SigninForm setUser={setUser} />} />
         </Routes>
+        <Footer user={user}/>
       </AuthedUserContext.Provider>
     </>
   );

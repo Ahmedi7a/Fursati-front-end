@@ -20,16 +20,17 @@ const CommentForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="text-input">Add comment:</label>
+      <label htmlFor="text-input"></label>
       <textarea
+      className="form-control"
         required
         type="text"
         name="text"
         id="text-input"
         value={formData.text}
         onChange={handleChange}
-      />
-      <button type="submit">SUBMIT COMMENT</button>
+      /> <br />
+      <button type="submit" className="btn btn-primary btn-block">SUBMIT COMMENT</button>
     </form>
   );
 };
