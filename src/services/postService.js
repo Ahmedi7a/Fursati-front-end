@@ -42,9 +42,9 @@ const index = async () => {
   };
 
   //delete post
-  const deletePost = async (hootId) => {
+  const deletePost = async (postId) => {
     try {
-      const res = await fetch(`${BASE_URL}/${hootId}`, {
+      const res = await fetch(`${BASE_URL}/${postId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -90,6 +90,26 @@ const index = async () => {
     }
   };
 
+  const deleteComment = async (postId, commentId) => {
+    try {
+        const res = await fetch(`${BASE_URL}/${postId}/comments/${commentId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${localStorage.getItem('token')}`,  
+            },
+        });
+
+        if (!res.ok) {
+            throw new Error('Failed to delete comment');
+        }
+
+        return res.json();  
+    } catch (error) {
+        console.error('Error deleting comment:', error);
+        throw error;  
+    }
+};
   export {
     index,
     show,
@@ -97,4 +117,5 @@ const index = async () => {
     createComment,
     deletePost,
     update,
+    deleteComment,
   }

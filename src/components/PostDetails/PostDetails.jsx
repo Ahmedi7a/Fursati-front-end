@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthedUserContext } from '../../App';
 import CommentForm from '../CommentForm/CommentForm';
+Navi
 
 const PostDetails = (props) => {
     const { postId } = useParams();
@@ -25,6 +26,16 @@ const PostDetails = (props) => {
         setPost({ ...post, comments: [...post.comments, newComment] });
     };
 
+
+    // Handle comment delete
+    const handleDeleteComment = async (commentId) => {
+        const deletedComment = await postService.deleteComment(postId, commentId);
+        setPost({
+            ...post,
+            comments: post.comments.filter((comment) => comment._id !== deletedComment._id),
+        });
+
+    };
     if (!post) return (
         <main className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
             <div className="spinner-border text-primary" role="status" style={{ width: '5rem', height: '5rem' }}>
@@ -88,6 +99,14 @@ const PostDetails = (props) => {
                                                 </p>
                                             </header>
                                             <p>{comment.text}</p>
+                                            {/* Delete button for comment */}
+                                            {comment.author._id === user._id && (
+                                                <button 
+                                                    onClick={() => handleDeleteComment(comment._id)} 
+                                                    className="btn btn-danger btn-sm">
+                                                    Delete
+                                                </button>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
