@@ -1,12 +1,13 @@
 import * as postService from '../../services/postService';
-import { useParams } from 'react-router-dom';
-import { useState, useEffect, useContext } from 'react';
+import { useParams,useNavigate } from 'react-router-dom';
+import { useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { AuthedUserContext } from '../../App';
 import CommentForm from '../CommentForm/CommentForm';
-Navi
+
 
 const PostDetails = (props) => {
+    const nav= useNavigate()
     const { postId } = useParams();
     const [post, setPost] = useState(null);
     const user = useContext(AuthedUserContext);
@@ -34,8 +35,10 @@ const PostDetails = (props) => {
             ...post,
             comments: post.comments.filter((comment) => comment._id !== deletedComment._id),
         });
-
+        nav(`/posts/${postId}`)
+        
     };
+
     if (!post) return (
         <main className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
             <div className="spinner-border text-primary" role="status" style={{ width: '5rem', height: '5rem' }}>
