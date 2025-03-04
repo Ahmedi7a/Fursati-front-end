@@ -41,8 +41,14 @@ const PostForm = (props) => {
   };
 
   return (
-    <main className="d-flex justify-content-center align-items-center vh-100" style={{ backgroundColor: "#f8f9fa" }}>
-    <div className="card shadow-lg p-4" style={{ width: "50%", borderRadius: "15px" }}>
+    <main
+    className="d-flex justify-content-center align-items-center vh-100 mt-5" // Added mt-5 for spacing
+    style={{ backgroundColor: "#f8f9fa" }}
+  >
+    <div
+      className="card shadow-lg p-4"
+      style={{ width: "50%", borderRadius: "15px" }}
+    >
       <h1 className="mb-4 text-center text-primary">{postId ? "Edit Post" : "New Post"}</h1>
       <form onSubmit={handleSubmit}>
         {/* Name */}
@@ -59,7 +65,7 @@ const PostForm = (props) => {
             placeholder="Enter your name"
           />
         </div>
-
+  
         {/* Email */}
         <div className="form-group mb-3">
           <label htmlFor="email-input" className="fw-bold">Email</label>
@@ -74,7 +80,7 @@ const PostForm = (props) => {
             placeholder="name@example.com"
           />
         </div>
-
+  
         {/* About */}
         <div className="form-group mb-3">
           <label htmlFor="about-input" className="fw-bold">About</label>
@@ -89,7 +95,7 @@ const PostForm = (props) => {
             placeholder="Tell us about yourself"
           />
         </div>
-
+  
         {/* Education */}
         <div className="form-group mb-3">
           <label htmlFor="education-input" className="fw-bold">Education</label>
@@ -108,7 +114,7 @@ const PostForm = (props) => {
             <option value="Doctorate (PhD)">Doctorate (PhD)</option>
           </select>
         </div>
-
+  
         {/* Role */}
         <div className="form-group mb-3">
           <label htmlFor="role-input" className="fw-bold">Role</label>
@@ -126,7 +132,7 @@ const PostForm = (props) => {
             <option value="Technician">Technician</option>
           </select>
         </div>
-
+  
         {/* Experience */}
         <div className="form-group mb-3">
           <label htmlFor="experience-input" className="fw-bold">Experience</label>
@@ -141,7 +147,7 @@ const PostForm = (props) => {
             placeholder="Describe your experience in detail"
           />
         </div>
-
+  
         {/* Status */}
         <div className="form-group mb-3">
           <label htmlFor="status-input" className="fw-bold">Status</label>
@@ -157,7 +163,7 @@ const PostForm = (props) => {
             <option value="Unemployed">Unemployed</option>
           </select>
         </div>
-
+  
         {/* Nationality */}
         <div className="form-group mb-3">
           <label htmlFor="nationality-input" className="fw-bold">Nationality</label>
@@ -173,7 +179,7 @@ const PostForm = (props) => {
             <option value="Foreigner">Foreigner</option>
           </select>
         </div>
-
+  
         {/* Submit Button */}
         <div className="d-flex justify-content-center">
           <button type="submit" className="btn btn-primary mt-3 w-50 fw-bold rounded-3 shadow-sm">
@@ -183,6 +189,7 @@ const PostForm = (props) => {
       </form>
     </div>
   </main>
+  
   );
 };
 
