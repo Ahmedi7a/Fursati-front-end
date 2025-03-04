@@ -56,7 +56,6 @@ const PostDetails = (props) => {
                             )}
                         </div>
                     </div>
-
                     <Link to="/posts" class="btn btn-primary">Back to Posts</Link>
                 </div>
 
