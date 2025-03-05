@@ -1,56 +1,53 @@
-* # Project name:  ***Fursati***
+# Forsati: Empowering Job Seekers & Connecting Opportunities
 
-* # Screenshot:
-![guest_home_page_720](https://github.com/user-attachments/assets/cb56c5e3-a249-4a28-87a7-5be334c2da8e)  
-**Guest Home Page**  
+## Description
 
-![user_home_page_720](https://github.com/user-attachments/assets/0767354b-101a-4601-b084-e6934f8841e0)  
-**User Home Page**  
+Fursati is a web-based platform designed to help job seekers showcase their skills and experience while allowing recruiters and other users to interact with them. The platform enables job seekers to create a public job-seeking post, where they highlight their expertise, career goals, and contact details. Other users can comment, ask questions, or provide feedback, making it an interactive space for career opportunities and professional networking.
+## Planing and requirments:
+https://trello.com/b/lWZRs4yk/project-3-planning
 
-![job_seekers_posts_720](https://github.com/user-attachments/assets/1765e962-6c3c-48e2-89cb-feac39ab9f6b)  
-**Job Seekers Posts**  
+## Try The App:
+https://fursati-front-end.vercel.app/
 
-![form_720](https://github.com/user-attachments/assets/28eb998a-f578-400c-ae47-45a1042f05fd)  
-**Post Form Page**  
+### Technologies Used:
 
-![model_720](https://github.com/user-attachments/assets/97dc7980-33a6-4e74-9ac1-1aa42900edb4)  
-**Data Model**  
-
-* # Description:  
-
- #### Fursati is a web-based platform designed to help job seekers showcase their skills and experience while allowing recruiters and other users to interact with them. The platform enables job seekers to create a public job-seeking post, where they highlight their expertise, career goals, and contact details. Other users can comment, ask questions, or provide feedback, making it an interactive space for career opportunities and professional networking.
-
-* # Getting started:
-[Fursati](https://fursati-front-end.vercel.app/)
-
- 1. Visit the link above.
- 2. Sign up or log in.
- 3. Create a post with your personal information, work experience, and education, including your email for direct communication.
- 4. Other users can comment on posts to interact with job seekers.
-
-
-
-* # Attributions:
-
-Libraries & Frameworks:
-* React – For building the interactive user interface
-* Express – For handling the backend
-* MongoDB – For storing user posts and comments
-* Bootstrap – For styling and responsive design
-
-* # Technologies used:
-
-* Frontend: React.js, Tailwind CSS (or any CSS framework used)
+* Frontend: React.js, JavaScript, Bootstrap
 * Backend: Node.js, Express.js
 * Database: MongoDB
-* Authentication: JWT
-* Deployment: Heroku 
+
+
+#### Guest Home Page:
+![guest home page](https://github.com/user-attachments/assets/69866bef-2173-469c-981e-1e9a253d0cd5)
+
+#### User Home Page:
+![user home page](https://github.com/user-attachments/assets/b5b584ee-827a-442f-9f5e-d23ffb3c9e82)
+
+### All posts:
+![pepole sharing post](https://github.com/user-attachments/assets/98adc4d8-32a9-4596-8be2-e5036b44db8c)
+
+### Details of your post:
+![job seekers posts](https://github.com/user-attachments/assets/8d510866-c514-4126-9e6b-082bd19deb03)
+People can add comment to your post
+
+### Viewing People posts:
+![vewing other posts](https://github.com/user-attachments/assets/321bb551-bda4-4531-9650-2fccbd5f347b)
+When viewing other people posts you can only comment to their posts
+
+### Sign-in-up form:
+![signup-in](https://github.com/user-attachments/assets/66aea771-df9a-4ba6-90ce-2480938e834a)
+
+### Add a job post form:
+![form](https://github.com/user-attachments/assets/12b5e7c7-fac3-4c6f-932c-e71c2da27fc4)
+
+### Model:
+![model](https://github.com/user-attachments/assets/305aeb65-eb3b-4030-9847-41a14a3d8a08)
+Getting confirmation before doing any CRUD related
+
+# Future Work
+
+* Real-time Notifications – Notify users about comments, likes, and updates on their saved places.
+* Dark Mode & UI Enhancements – Introduce dark mode and refine the user interface for a better experience.
+* Community Engagement Features – Enable users to follow others
 
 
 
-# Next steps: 
-
-#### Add search and filter options to find posts easily.
-#### Support profile pictures and image uploads for posts.
-####  Implement a notification system for new comments and interactions.
-#### Ensure mobile responsiveness for a better experience across devices.
