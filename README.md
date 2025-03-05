@@ -1,96 +1,48 @@
-# REACT JWT STARTER 1111111111111111111111111111
+* # Project name:  ***Fursati***
 
-## Cloning the Auth boilerplate
+* # Screenshot:
+                             
+![guest_home_page_720](https://github.com/user-attachments/assets/cb56c5e3-a249-4a28-87a7-5be334c2da8e)
+![user_home_page_720](https://github.com/user-attachments/assets/0767354b-101a-4601-b084-e6934f8841e0)
+![job_seekers_posts_720](https://github.com/user-attachments/assets/1765e962-6c3c-48e2-89cb-feac39ab9f6b)
+![form_720](https://github.com/user-attachments/assets/28eb998a-f578-400c-ae47-45a1042f05fd)
+![model_720](https://github.com/user-attachments/assets/97dc7980-33a6-4e74-9ac1-1aa42900edb4)
 
-This lecture uses the [React JWT Auth Template](https://github.com/SEB-4-Bahrain/react-jwt-auth-template) as starter code. The template includes code to authenticate users in React using JWT tokens generated from an existing Express backend API.
 
-Navigate to the `React JWT Auth Template` and clone the repository to your machine:
 
-```bash
-git clone https://github.com/SEB-4-Bahrain/react-jwt-auth-template.git <YOUR_APP_NAME> 
-```
+* # Description: 
+ #### Fursati is a web-based platform designed to help job seekers showcase their skills and experience while allowing recruiters and other users to interact with them. The platform enables job seekers to create a public job-seeking post, where they highlight their expertise, career goals, and contact details. Other users can comment, ask questions, or provide feedback, making it an interactive space for career opportunities and professional networking.
 
-Next, `cd` into your renamed directory:xq
+* # Getting started:
 
-```bash
-cd <YOUR_APP_NAME>
-```
+ 1. Visit the link above.
+ 2. Sign up or log in.
+ 3. Create a post with your personal information, work experience, and education, including your email for direct communication.
+ 4. Other users can comment on posts to interact with job seekers.
 
-Finally, remove the existing `.git` information from this template:
 
-```bash
-rm -rf .git
-```
 
-> Removing the `.git` info is important as this is just a starter template provided by GA. You do not need the existing git history for this project.
+* # Attributions:
 
-## GitHub setup
+Libraries & Frameworks:
+* React – For building the interactive user interface
+* Express – For handling the backend
+* MongoDB – For storing user posts and comments
+* Bootstrap – For styling and responsive design
 
-To add this project to GitHub, initialize a new Git repository:
+* # Technologies used:
 
-```bash
-git init
-git add .
-git commit -m "init commit"
-```
+* Frontend: React.js, Tailwind CSS (or any CSS framework used)
+* Backend: Node.js, Express.js
+* Database: MongoDB
+* Authentication: JWT
+* Deployment: Heroku 
 
-Make a new repository on [GitHub](https://github.com/) named `<YOUR_APP_NAME>`. 
 
-Link your local project to your remote GitHub repo:
 
-```bash
-git remote add origin https://github.com/<github-username>/<YOUR_APP_NAME>.git
-git push origin main
-```
+# Next steps: 
 
-> 🚨 Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>` and `<YOUR_APP_NAME>` (including the `<` and `>`) in the URL above.
-
-Open the project's folder in your code editor:
-
-```bash
-code .
-```
-
-## Install dependencies
-
-Next, you will want to install all of the packages listed in `package.json`
-
-```bash
-npm i
-```
-
-## Create a `.env`
-
-Run the following command in your terminal:
-
-```bash
-touch .env
-```
-
-Lastly, we want to include a `VITE_EXPRESS_BACKEND_URL`.
-
-Add the following secret key to your `.env`:
-
-```text
-VITE_EXPRESS_BACKEND_URL="http://localhost:3000"
-```
-
-## Update the `.gitignore`
-
-Add `package-lock.json` and `.env` to the `.gitignore` file.  
-
-```text
-node_modules
-package-lock.json
-.env
-```
-
-## Start your application
-
-Start the application with the following command:
-
-```bash
-npm run dev
-```
-
-Happy Coding!
+#### Add search and filter options to find posts easily.
+#### Support profile pictures and image uploads for posts.
+####  Implement a notification system for new comments and interactions.
+#### Ensure mobile responsiveness for a better experience across devices.
