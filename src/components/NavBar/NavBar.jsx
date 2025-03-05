@@ -5,34 +5,44 @@ import { useContext } from 'react';
 const NavBar = ({ handleSignout }) => {
   const user = useContext(AuthedUserContext);
   return (
-    <>
-      {user ? (
-        <nav>
-          <ul>
-            <li>Welcome, {user.username}</li>
-            <li>
-              <Link to="/">Dashboard</Link>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">Fursati</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" aria-current="page" to="/">Home</Link>
             </li>
-            <li>
-              <Link to="" onClick={handleSignout}>
-                Sign Out
-              </Link>
-            </li>
+            {user ? (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/posts">Job Posts</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/posts/new">New Post</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="" onClick={handleSignout}>Sign out</Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signin">Sign In</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup">Sign Up</Link>
+                </li>
+              </>
+            )}
           </ul>
-        </nav>
-      ) : (
-        <nav>
-          <ul>
-            <li>
-              <Link to="/signin">Sign In</Link>
-            </li>
-            <li>
-              <Link to="/signup">Sign Up</Link>
-            </li>
-          </ul>
-        </nav>
-      )}
-    </>
+        </div>
+      </div>
+    </nav>
   );
 };
+
 export default NavBar;
