@@ -19,6 +19,9 @@ https://fursati-front-end.vercel.app/
 #### Guest Home Page:
 ![guest home page](https://github.com/user-attachments/assets/69866bef-2173-469c-981e-1e9a253d0cd5)
 
+### Sign-in-up form:
+![signup-in](https://github.com/user-attachments/assets/66aea771-df9a-4ba6-90ce-2480938e834a)
+
 #### User Home Page:
 ![user home page](https://github.com/user-attachments/assets/b5b584ee-827a-442f-9f5e-d23ffb3c9e82)
 
@@ -32,9 +35,6 @@ People can add comment to your post
 ### Viewing People posts:
 ![vewing other posts](https://github.com/user-attachments/assets/321bb551-bda4-4531-9650-2fccbd5f347b)
 When viewing other people posts you can only comment to their posts
-
-### Sign-in-up form:
-![signup-in](https://github.com/user-attachments/assets/66aea771-df9a-4ba6-90ce-2480938e834a)
 
 ### Add a job post form:
 ![form](https://github.com/user-attachments/assets/12b5e7c7-fac3-4c6f-932c-e71c2da27fc4)
