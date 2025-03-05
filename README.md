@@ -45,6 +45,8 @@ Getting confirmation before doing any CRUD related
 
 # Future Work
 
+*  Add search and filter options to find posts easily.
+* Support profile pictures and CV uploads for posts.
 * Real-time Notifications – Notify users about comments, likes, and updates on their saved places.
 * Dark Mode & UI Enhancements – Introduce dark mode and refine the user interface for a better experience.
 * Community Engagement Features – Enable users to follow others
