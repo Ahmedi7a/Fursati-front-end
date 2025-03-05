@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Landing = () => {
   return (
     <main>
-      {/* Hero Section */}
       <div className="hero bg-light pt-7">
         <div className="container-xl">
           <div className="row align-items-center">
@@ -19,9 +18,9 @@ const Landing = () => {
             </div>
             <div className="col-md-6 order-md-1">
               <div className="text-container p-4 d-flex flex-column justify-content-center h-100 mb-5">
-                <h1 className="display-3 fw-bold text-dark">Welcome to Blog Mastery</h1>
+                <h1 className="display-3 fw-bold text-dark">Welcome to Fursati</h1>
                 <p className="lead text-dark">
-                  Are you ready to take your blogging journey to new heights? Blog Mastery is your ultimate guide to creating and managing a successful blog that captivates your audience and drives engagement.
+                  Are you ready to take the next step in your career? Fursati is your gateway to landing the job you deserve. Connect with top employers, enhance your skills, and showcase your talent like never before!
                 </p>
                 <div className="form-container text-center">
                   <form>
@@ -44,7 +43,6 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* SVG for decoration */}
       <svg
         className="frame-decoration"
         data-name="Layer 2"
@@ -67,11 +65,10 @@ const Landing = () => {
         />
       </svg>
 
-      {/* Course Summary Section */}
       <div className="container mt-5">
         <div className="row">
           <div className="col-12 text-center mb-5">
-            <h2 className="fw-bold">Course Summary</h2>
+            <h2 className="fw-bold">Why Choose Fursati?</h2>
           </div>
         </div>
         <div className="row">
@@ -79,21 +76,21 @@ const Landing = () => {
             <div className="bg-white p-5 shadow-lg rounded">
               <ul className="list-unstyled">
                 <li className="border-bottom pb-4">
-                  <h5 className="fw-bold">1. Comprehensive Training</h5>
+                  <h5 className="fw-bold">1. Job Matching</h5>
                   <p className="text-muted">
-                    Our courses provide comprehensive training in a wide range of topics. From beginner-level fundamentals to advanced concepts, we offer in-depth content to cater to learners of all levels.
+                    Our intelligent system connects you with job opportunities tailored to your skills and aspirations.
                   </p>
                 </li>
                 <li className="border-bottom pb-4 pt-4">
-                  <h5 className="fw-bold">2. Expert Instructors</h5>
-                  <p className="text-muted">
-                    Learn from industry experts who bring years of experience and expertise to the table. Our instructors are passionate about sharing their knowledge and helping you succeed.
+                <h5 className="fw-bold">2. Skill Development</h5>
+                <p className="text-muted">
+                    Access top-notch resources to upskill and make yourself stand out in the competitive job market.
                   </p>
                 </li>
                 <li className="pt-4">
-                  <h5 className="fw-bold">3. Practical Application</h5>
-                  <p className="text-muted">
-                    We believe in practical learning that goes beyond theory. Our courses focus on real-world application, equipping you with the skills and knowledge needed to excel in your field.
+                <h5 className="fw-bold">3. Success Stories</h5>
+                <p className="text-muted">
+                    Be inspired by real users who landed their dream jobs through Fursati. Your success starts here!
                   </p>
                 </li>
               </ul>
@@ -102,7 +99,6 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* Testimonials Section */}
       <div className="container mt-5">
         <div className="row gy-4">
           <div className="col-md-4 text-center">
@@ -112,9 +108,9 @@ const Landing = () => {
               className="rounded-circle mb-3"
             />
             <p className="lead fst-italic">
-              "This ebook completely transformed my blogging journey. The practical strategies and valuable insights helped me take my blog to new heights. I highly recommend it!"
+              "Thanks to Fursati, I secured my first job as a software developer in Manama! The platform connected me with the right employers, and I finally started my dream career."
             </p>
-            <p className="fw-bold">Kenny Smith - Portland, ME</p>
+            <p className="fw-bold">Ali Hassan - Manama, Bahrain</p>
           </div>
 
           <div className="col-md-4 text-center">
@@ -124,9 +120,9 @@ const Landing = () => {
               className="rounded-circle mb-3"
             />
             <p className="lead fst-italic">
-              "I'm so grateful for this ebook! It provided me with the guidance and inspiration I needed to create engaging content and build a loyal readership. It's a game-changer!"
+              "I was struggling to find a job after graduation, but Fursati helped me land an amazing opportunity in a marketing firm in Riffa. Highly recommend!"
             </p>
-            <p className="fw-bold">Laurie Mitchell - Miami, FL</p>
+            <p className="fw-bold">Fatima Yusuf - Riffa, Bahrain</p>
           </div>
 
           <div className="col-md-4 text-center">
@@ -136,9 +132,9 @@ const Landing = () => {
               className="rounded-circle mb-3"
             />
             <p className="lead fst-italic">
-              "I can't recommend this ebook enough. It's a treasure of blogging wisdom. It helped me unlock my creativity, connect with my audience, and achieve remarkable results."
+              "Fursati changed my life! I found a great job in IT support in Muharraq. The courses and networking features really helped me grow. Highly recommended"
             </p>
-            <p className="fw-bold">Henry White - Boston, MA</p>
+            <p className="fw-bold">Mohammed Salem - Muharraq, Bahrain</p>
           </div>
         </div>
       </div>

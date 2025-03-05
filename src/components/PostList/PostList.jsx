@@ -7,13 +7,12 @@ const PostList = (props) => {
                 <div className="col-lg-6 col-md-8">
                     <h1 className="fw-light">Job Seekers Posts</h1>
                     <p className="lead text-body-secondary">Share your job-seeking updates with the community and connect with potential recruiters looking for talent. By posting your availability and skills, you increase your chances of being discovered by employers. This platform allows you to showcase your expertise, grow your professional network, and create new career opportunities. Whether you're looking to make your next career move or expand your network, this is the place to get noticed by the right people.</p>                    <p>
-                        <a href="/posts/new" className="btn btn-primary my-2">Make Your Post</a>
-                        <a href="#" className="btn btn-secondary my-2 ms-2">View Your Post</a>
+                        <a href="/posts/new" className="btn btn-secondary my-2">Make Your Post</a>
                     </p>
                 </div>
             </div>
             <div className="list-group list-group-flush border-bottom scrollarea">
-                <a href="#" className="list-group-item list-group-item-action active py-3 lh-sm" aria-current="true">
+                <a href="#" className="list-group-item list-group-item-action py-3 lh-sm" aria-current="true" style={{ background: 'linear-gradient(135deg, #2C3E50, #4CA1AF)', color: 'white' }}>
                     <div className="d-flex w-100 align-items-center justify-content-between">
                         <strong className="mb-1">Job Posts</strong>
                     </div>
