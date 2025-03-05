@@ -11,13 +11,13 @@ function Footer() {
                 <a href="/" className="nav-link p-0 text-white">Home</a>
               </li>
               <li className="nav-item mb-2" style={{ marginRight: '15px' }}>
-                <a href="https://www.linkedin.com/in/ahmed-abdulla-amralla/" className="nav-link p-0 text-white">Linkedin</a>
+                <a href="https://www.linkedin.com/in/ahmed-abdulla-amralla/" target="_blank" className="nav-link p-0 text-white">Linkedin</a>
               </li>
               <li className="nav-item mb-2" style={{ marginRight: '15px' }}>
-                <a href="https://github.com/Ahmedi7a?tab=repositories" className="nav-link p-0 text-white">GitHub</a>
+                <a href="https://github.com/Ahmedi7a?tab=repositories" target="_blank" className="nav-link p-0 text-white">GitHub</a>
               </li>
               <li className="nav-item mb-2" style={{ marginRight: '15px' }}>
-                <a href="https://www.linkedin.com/in/ahmed-abdulla-amralla/" className="nav-link p-0 text-white">About</a>
+                <a href="https://www.linkedin.com/in/ahmed-abdulla-amralla/" target="_blank" className="nav-link p-0 text-white">About</a>
               </li>
             </ul>
           </div>
@@ -27,16 +27,16 @@ function Footer() {
             <h5>Lataafa</h5>
             <ul className="nav" style={{ display: 'flex', listStyle: 'none', padding: 0 }}>
               <li className="nav-item mb-2" style={{ marginRight: '15px' }}>
-                <a href="/" className="nav-link p-0 text-white">Home</a>
+                <a href="/"  className="nav-link p-0 text-white">Home</a>
               </li>
               <li className="nav-item mb-2" style={{ marginRight: '15px' }}>
-                <a href="https://linkedin.com/in/lateefa-aldoseri" className="nav-link p-0 text-white">Linkedin</a>
+                <a href="https://linkedin.com/in/lateefa-aldoseri" target="_blank" className="nav-link p-0 text-white">Linkedin</a>
               </li>
               <li className="nav-item mb-2" style={{ marginRight: '15px' }}>
-                <a href="https://github.com/LATEEFA369" className="nav-link p-0 text-white">GitHub</a>
+                <a href="https://github.com/LATEEFA369" target="_blank" className="nav-link p-0 text-white">GitHub</a>
               </li>
               <li className="nav-item mb-2" style={{ marginRight: '15px' }}>
-                <a href="https://linkedin.com/in/lateefa-aldoseri" className="nav-link p-0 text-white">About</a>
+                <a href="https://linkedin.com/in/lateefa-aldoseri" target="_blank" className="nav-link p-0 text-white">About</a>
               </li>
             </ul>
           </div>

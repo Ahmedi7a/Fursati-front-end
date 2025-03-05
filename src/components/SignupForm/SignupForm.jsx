@@ -49,7 +49,7 @@ const SignupForm = (props) => {
                     <p className="text-center text-danger">{message}</p>
                     <form onSubmit={handleSubmit} className="mx-1">
                       <div className="form-group mb-4">
-                        <label htmlFor="username" className="form-label">Your Name</label>
+                        <label htmlFor="username" className="form-label">Your Username</label>
                         <input
                           type="text"
                           id="username"
