@@ -15,7 +15,6 @@ const PostDetails = (props) => {
     useEffect(() => {
         const fetchPost = async () => {
             const postData = await postService.show(postId);
-            console.log('postData', postData);
             setPost(postData);
         };
         fetchPost();
