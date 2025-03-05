@@ -1,12 +1,16 @@
 * # Project name:  ***Fursati***
 
 * # Screenshot:
-                             
-![guest_home_page_720](https://github.com/user-attachments/assets/cb56c5e3-a249-4a28-87a7-5be334c2da8e)
+![guest_home_page_720](https://github.com/user-attachments/assets/cb56c5e3-a249-4a28-87a7-5be334c2da8e) 
+
 ![user_home_page_720](https://github.com/user-attachments/assets/0767354b-101a-4601-b084-e6934f8841e0)
+
 ![job_seekers_posts_720](https://github.com/user-attachments/assets/1765e962-6c3c-48e2-89cb-feac39ab9f6b)
+
 ![form_720](https://github.com/user-attachments/assets/28eb998a-f578-400c-ae47-45a1042f05fd)
+
 ![model_720](https://github.com/user-attachments/assets/97dc7980-33a6-4e74-9ac1-1aa42900edb4)
+
 
 
 
