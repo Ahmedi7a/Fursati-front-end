@@ -4,7 +4,7 @@ import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthedUserContext } from '../../App';
 import CommentForm from '../CommentForm/CommentForm';
-Navi
+
 
 const PostDetails = (props) => {
     const { postId } = useParams();
@@ -47,7 +47,7 @@ const PostDetails = (props) => {
         <main className="container mx-auto p-4">
             <div className="row">
                 <div className="col-lg-8 col-md-12">
-                    {/* Post Details Box */}
+                    {/* Post Details Box */}    
                     <div className="card shadow-sm mb-4">
                         <div className="card-body">
                             <h1 className="card-title">{post.name}</h1>

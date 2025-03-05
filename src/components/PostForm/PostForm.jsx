@@ -39,158 +39,185 @@ const PostForm = (props) => {
       props.handleAddPost(formData);
     }
   };
-
   return (
-    <main
-    className="d-flex justify-content-center align-items-center vh-100 mt-5" // Added mt-5 for spacing
-    style={{ backgroundColor: "#f8f9fa" }}
-  >
-    <div
-      className="card shadow-lg p-4"
-      style={{ width: "50%", borderRadius: "15px" }}
-    >
-      <h1 className="mb-4 text-center text-primary">{postId ? "Edit Post" : "New Post"}</h1>
-      <form onSubmit={handleSubmit}>
-        {/* Name */}
-        <div className="form-group mb-3">
-          <label htmlFor="name-input" className="fw-bold">Name</label>
-          <input
-            required
-            type="text"
-            className="form-control rounded-3"
-            name="name"
-            id="name-input"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-          />
-        </div>
+    <section className="h-100 bg-light d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
+      <div className="container py-5">
+        <div className="row d-flex justify-content-center align-items-center">
+          <div className="col-lg-12 col-md-10">
+            <div className="card shadow-sm border-0 rounded-3">
+              <div className="row g-0">
+                <div className="col-xl-6">
+                  <img 
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp" 
+                    alt="Sample" 
+                    className="img-fluid rounded-start" 
+                    style={{ height: '100%', objectFit: 'cover' }} 
+                  />
+                </div>
+                <div className="col-xl-6">
+                  <div className="card-body p-md-5 text-black">
+                    <h3 className="mb-5 text-uppercase text-center" style={{ color: '#555' }}>
+                      {postId ? "Edit Post" : "New Post"}
+                    </h3>
+                    <form onSubmit={handleSubmit}>
+                      {/* Name and Email */}
+                      <div className="row mb-3">
+                        <div className="col-12 col-md-6">
+                          <label htmlFor="name" className="form-label">Name</label>
+                          <input 
+                            id="name"
+                            type="text" 
+                            className="form-control form-control-md border-0 rounded-3 p-3" 
+                            name="name" 
+                            value={formData.name} 
+                            onChange={handleChange} 
+                            placeholder="Enter your full name."
+                            required 
+                            style={{ backgroundColor: '#f7f7f7', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', transition: 'all 0.3s' }}
+                          />
+                        </div>
+                        <div className="col-12 col-md-6">
+                          <label htmlFor="email" className="form-label">Email</label>
+                          <input 
+                            id="email"
+                            type="email" 
+                            className="form-control form-control-md border-0 rounded-3 p-3" 
+                            name="email" 
+                            value={formData.email} 
+                            onChange={handleChange} 
+                            placeholder="Provide a valid email address."
+                            required 
+                            style={{ backgroundColor: '#f7f7f7', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', transition: 'all 0.3s' }}
+                          />
+                        </div>
+                      </div>
   
-        {/* Email */}
-        <div className="form-group mb-3">
-          <label htmlFor="email-input" className="fw-bold">Email</label>
-          <input
-            required
-            type="email"
-            className="form-control rounded-3"
-            name="email"
-            id="email-input"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="name@example.com"
-          />
-        </div>
+                      {/* About */}
+                      <div className="mb-3">
+                        <label htmlFor="about" className="form-label">About</label>
+                        <textarea 
+                          id="about"
+                          className="form-control form-control-md border-0 rounded-3 p-3" 
+                          name="about" 
+                          value={formData.about} 
+                          onChange={handleChange} 
+                          placeholder="Write a short description about yourself."
+                          required 
+                          rows="3" 
+                          style={{ backgroundColor: '#f7f7f7', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', transition: 'all 0.3s' }}
+                        ></textarea>
+                      </div>
   
-        {/* About */}
-        <div className="form-group mb-3">
-          <label htmlFor="about-input" className="fw-bold">About</label>
-          <textarea
-            required
-            className="form-control rounded-3"
-            name="about"
-            id="about-input"
-            value={formData.about}
-            onChange={handleChange}
-            rows="3"
-            placeholder="Tell us about yourself"
-          />
-        </div>
+                      {/* Role and Education in same row */}
+                      <div className="row mb-3">
+                        <div className="col-12 col-md-6">
+                          <label htmlFor="role" className="form-label">Role</label>
+                          <select 
+                            id="role"
+                            className="form-control form-control-md border-0 rounded-3 p-3" 
+                            name="role" 
+                            value={formData.role} 
+                            onChange={handleChange} 
+                            required 
+                            style={{ backgroundColor: '#f7f7f7', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', transition: 'all 0.3s' }}
+                          >
+                            <option>Software Development</option>
+                            <option>Networking</option>
+                            <option>Security</option>
+                            <option>Technician</option>
+                          </select>
+                        </div>
+                        <div className="col-12 col-md-6">
+                          <label htmlFor="education" className="form-label">Education</label>
+                          <select 
+                            id="education"
+                            className="form-control form-control-md border-0 rounded-3 p-3" 
+                            name="education" 
+                            value={formData.education} 
+                            onChange={handleChange} 
+                            required 
+                            style={{ backgroundColor: '#f7f7f7', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', transition: 'all 0.3s' }}
+                          >
+                            <option>High School</option>
+                            <option>Diploma Degree</option>
+                            <option>Bachelor's Degree</option>
+                            <option>Master's Degree</option>
+                            <option>Doctorate (PhD)</option>
+                          </select>
+                        </div>
+                      </div>
   
-        {/* Education */}
-        <div className="form-group mb-3">
-          <label htmlFor="education-input" className="fw-bold">Education</label>
-          <select
-            required
-            className="form-control rounded-3"
-            name="education"
-            id="education-input"
-            value={formData.education}
-            onChange={handleChange}
-          >
-            <option value="High School">High School</option>
-            <option value="Diploma Degree">Diploma Degree</option>
-            <option value="Bachelor's Degree">Bachelor's Degree</option>
-            <option value="Master's Degree">Master's Degree</option>
-            <option value="Doctorate (PhD)">Doctorate (PhD)</option>
-          </select>
-        </div>
+                      {/* Experience */}
+                      <div className="mb-3">
+                        <label htmlFor="experience" className="form-label">Experience</label>
+                        <textarea 
+                          id="experience"
+                          className="form-control form-control-md border-0 rounded-3 p-3" 
+                          name="experience" 
+                          value={formData.experience} 
+                          onChange={handleChange} 
+                          placeholder="Describe your work experience."
+                          required 
+                          rows="3" 
+                          style={{ backgroundColor: '#f7f7f7', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', transition: 'all 0.3s' }}
+                        ></textarea>
+                      </div>
   
-        {/* Role */}
-        <div className="form-group mb-3">
-          <label htmlFor="role-input" className="fw-bold">Role</label>
-          <select
-            required
-            className="form-control rounded-3"
-            name="role"
-            id="role-input"
-            value={formData.role}
-            onChange={handleChange}
-          >
-            <option value="Software Development">Software Development</option>
-            <option value="Networking">Networking</option>
-            <option value="Security">Security</option>
-            <option value="Technician">Technician</option>
-          </select>
-        </div>
+                      {/* Status and Nationality in same row */}
+                      <div className="row mb-3">
+                        <div className="col-12 col-md-6">
+                          <label htmlFor="status" className="form-label">Status</label>
+                          <select 
+                            id="status"
+                            className="form-control form-control-md border-0 rounded-3 p-3" 
+                            name="status" 
+                            value={formData.status} 
+                            onChange={handleChange} 
+                            required 
+                            style={{ backgroundColor: '#f7f7f7', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', transition: 'all 0.3s' }}
+                          >
+                            <option>Employed</option>
+                            <option>Unemployed</option>
+                          </select>
+                        </div>
+                        <div className="col-12 col-md-6">
+                          <label htmlFor="nationality" className="form-label">Nationality</label>
+                          <select 
+                            id="nationality"
+                            className="form-control form-control-md border-0 rounded-3 p-3" 
+                            name="nationality" 
+                            value={formData.nationality} 
+                            onChange={handleChange} 
+                            required 
+                            style={{ backgroundColor: '#f7f7f7', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', transition: 'all 0.3s' }}
+                          >
+                            <option>Bahraini</option>
+                            <option>Foreigner</option>
+                          </select>
+                        </div>
+                      </div>
   
-        {/* Experience */}
-        <div className="form-group mb-3">
-          <label htmlFor="experience-input" className="fw-bold">Experience</label>
-          <textarea
-            required
-            className="form-control rounded-3"
-            name="experience"
-            id="experience-input"
-            value={formData.experience}
-            onChange={handleChange}
-            rows="5"
-            placeholder="Describe your experience in detail"
-          />
+                      <div className="d-flex justify-content-center">
+                        <button 
+                          type="submit" 
+                          className="btn btn-primary btn-lg rounded-3" 
+                          style={{ padding: '12px 24px', fontSize: '16px' }}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-  
-        {/* Status */}
-        <div className="form-group mb-3">
-          <label htmlFor="status-input" className="fw-bold">Status</label>
-          <select
-            required
-            className="form-control rounded-3"
-            name="status"
-            id="status-input"
-            value={formData.status}
-            onChange={handleChange}
-          >
-            <option value="Employed">Employed</option>
-            <option value="Unemployed">Unemployed</option>
-          </select>
-        </div>
-  
-        {/* Nationality */}
-        <div className="form-group mb-3">
-          <label htmlFor="nationality-input" className="fw-bold">Nationality</label>
-          <select
-            required
-            className="form-control rounded-3"
-            name="nationality"
-            id="nationality-input"
-            value={formData.nationality}
-            onChange={handleChange}
-          >
-            <option value="Bahraini">Bahraini</option>
-            <option value="Foreigner">Foreigner</option>
-          </select>
-        </div>
-  
-        {/* Submit Button */}
-        <div className="d-flex justify-content-center">
-          <button type="submit" className="btn btn-primary mt-3 w-50 fw-bold rounded-3 shadow-sm">
-            SUBMIT
-          </button>
-        </div>
-      </form>
-    </div>
-  </main>
-  
+      </div>
+    </section>
   );
+  
+
 };
 
 export default PostForm;
