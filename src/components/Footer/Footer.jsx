@@ -3,7 +3,7 @@ function Footer() {
     <footer className="py-5" style={{ background: 'linear-gradient(135deg, #2C3E50, #4CA1AF)', color: 'white' }}>
       <div className="container">
         <div className="row d-flex justify-content-between">
-          {/* Left section */}
+          {/*  footr */}
           <div className="col-12 col-md-2 mb-3">
             <h5>Ahmed Abdulla</h5>
             <ul className="nav" style={{ display: 'flex', listStyle: 'none', padding: 0 }}>
@@ -22,9 +22,8 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Right section */}
           <div className="col-12 col-md-2 mb-3">
-            <h5>Lataafa</h5>
+            <h5>Lataafa Aladoseri</h5>
             <ul className="nav" style={{ display: 'flex', listStyle: 'none', padding: 0 }}>
               <li className="nav-item mb-2" style={{ marginRight: '15px' }}>
                 <a href="/"  className="nav-link p-0 text-white">Home</a>
