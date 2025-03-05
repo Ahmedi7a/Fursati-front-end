@@ -22,7 +22,7 @@
  #### Fursati is a web-based platform designed to help job seekers showcase their skills and experience while allowing recruiters and other users to interact with them. The platform enables job seekers to create a public job-seeking post, where they highlight their expertise, career goals, and contact details. Other users can comment, ask questions, or provide feedback, making it an interactive space for career opportunities and professional networking.
 
 * # Getting started:
-[fursati](https://fursati-front-end.vercel.app/)
+[Fursati](https://fursati-front-end.vercel.app/)
 
  1. Visit the link above.
  2. Sign up or log in.
